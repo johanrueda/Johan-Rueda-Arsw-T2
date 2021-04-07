@@ -20,7 +20,7 @@ public class HttPConnectionService {
         nombre = encodedQuery.replace("+", "%20");
         try {
             response = Unirest
-                    .get("https://api.openweathermap.org/data/2.5/weather?q=" + nombre + "&appid=e6d589177c6d5fbf9467ccb98fab7dfb")
+                    .get("https://api.openweathermap.org/data/2.5/weather?q=" + nombre + "&appid=f30cfe4149c9d630e1bc1b2a2410c27a")
                     .asJson();
         } catch (UnirestException e) {
             throw e;
