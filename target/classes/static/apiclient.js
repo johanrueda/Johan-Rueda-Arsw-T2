@@ -6,7 +6,7 @@ apiclient = (function () {
 
         const promise = new Promise((resolve, reject) => {
             $.ajax({
-                url: localhost + "/weather/" + city_name,
+                url: heroku + "/weather/" + city_name,
                 type: 'GET',
                 contentType: "application/json"
             }).done(function (response) {

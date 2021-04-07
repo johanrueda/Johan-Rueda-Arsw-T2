@@ -22,6 +22,10 @@ Como esta arquitectura fue desarrollado con el principio de inyeccion de depende
 
 https://rueda-arsw-t2.herokuapp.com/
 
+## Link Git
+
+https://github.com/johanrueda/Johan-Rueda-Arsw-T2
+
 ### Uso local
 
 Para poder usarlo localemente, necesitamos cambiar el apiclien de heroku a localhost, luego usamos el comando de **mvn spring-boot:run** y en nuestro navegador de preferencia colocamos en la url localhost:8080/index.html
