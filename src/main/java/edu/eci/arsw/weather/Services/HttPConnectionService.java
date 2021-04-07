@@ -14,7 +14,7 @@ import java.nio.charset.StandardCharsets;
 
 @Service("connection")
 public class HttPConnectionService {
-    public Weather getWeatherOfACity(String nombre) throws UnirestException, UnsupportedEncodingException {
+    public Weather getWeatherOfACity(String nombre) throws weatherServiceException, UnsupportedEncodingException {
         HttpResponse<JsonNode> response;
         String encodedQuery = URLEncoder.encode(nombre, StandardCharsets.UTF_8.toString());
         nombre = encodedQuery.replace("+", "%20");
@@ -23,11 +23,11 @@ public class HttPConnectionService {
                     .get("https://api.openweathermap.org/data/2.5/weather?q=" + nombre + "&appid=f30cfe4149c9d630e1bc1b2a2410c27a")
                     .asJson();
         } catch (UnirestException e) {
-            throw e;
+            throw new weatherServiceException("Error de conexion con Open Weather", e);
         }
         JSONObject jsonObject = response.getBody().getObject();
         if (jsonObject.getInt("cod") == 404) {
-            System.out.println("No se encontro la ciudad");
+            throw new weatherServiceException("Ciudad no encontrada");
         }
         return getWeather(jsonObject);
     }

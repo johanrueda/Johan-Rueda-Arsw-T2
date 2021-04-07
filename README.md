@@ -9,6 +9,30 @@ Con el objetivo de preparar el examen final del segundo tercio, por favor siga l
 3. Si no ha terminado por completo el último laboratorio, hagalo, si es necesario desde el inicio y completo. En ese laboratorio esta basado el parcial.
 4. Revise la documentación de Google Maps para agregar marcadores a un mapa o revise este [Codepen](https://codepen.io/SitePoint/pen/YWKLzv?editors=0110)
 
+## Solucion parcial
+Se realizo el cache con vencimiento a 5 minutos.
+
+### Diseño
+Se implemento una arquitectura cliente-servidor, donde un servicio REST consume un API, se utiliza el principio de inyeccion de dependencias, ya que con esto se garantiza un bajo acoplamiento, y un fronted que hace que el cliente tenga una experiencia al momento de consumir los recursos de esta API.
+
+### Extension
+Como esta arquitectura fue desarrollado con el principio de inyeccion de dependencias, es muy facil hacer uso de las extensiones ya que si queremos consumir recursos de otras API solo debemos hacer las respecitivas extensiones y luego incluirarlas en el sistema.
+
+## Link Heroku
+
+https://rueda-arsw-t2.herokuapp.com/
+
+### Uso local
+
+Para poder usarlo localemente, necesitamos cambiar el apiclien de heroku a localhost, luego usamos el comando de **mvn spring-boot:run** y en nuestro navegador de preferencia colocamos en la url localhost:8080/index.html
+
+![](images/cambio.png)
+
+y asi quedara nuestro servicio:
+
+![](images/pagina.png)
+
+
 ## Descripción del Problema a Solucionar
 
 Parcial del segundo tercio

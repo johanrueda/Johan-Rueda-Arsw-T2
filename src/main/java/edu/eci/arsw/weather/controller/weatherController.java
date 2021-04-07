@@ -1,4 +1,5 @@
 package edu.eci.arsw.weather.controller;
+import edu.eci.arsw.weather.Services.weatherServiceException;
 import  edu.eci.arsw.weather.controller.weatherController;
 import com.mashape.unirest.http.exceptions.UnirestException;
 import edu.eci.arsw.weather.Services.weatherServices;
@@ -28,7 +29,7 @@ public class weatherController {
      * @return Un JSON con el código del país, ciudad, clima, descripción, temperatura, sensación térmica, latitud, longitud y LocalDateTime de la consulta
      */
     @GetMapping("/{nombre}")
-    public ResponseEntity<?> getWeatherOfACity(@PathVariable String nombre) {
+    public ResponseEntity<?> getWeatherOfACity(@PathVariable String nombre) throws weatherServiceException {
         return new ResponseEntity<>(openWeatherServices.getWeatherOfACity(nombre), HttpStatus.ACCEPTED);
     }
 

@@ -10,9 +10,9 @@ var app = (function () {
             apiclient.getWeatherOfACity(ciudad, actualizarTabla);
         } else {
             Swal.fire({
-                icon: 'error',
-                title: 'Oops...',
-                text: 'Enter a valid city!',
+                icon: 'Fallo',
+                title: 'Algo Paso :(',
+                text: 'Verifica tu peticion!',
             })
         }
 

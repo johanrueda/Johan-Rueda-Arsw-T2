@@ -1,9 +1,14 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Open Weather</title>
+    <title>Clima</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css"/>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
@@ -18,24 +23,26 @@
 </head>
 
 
-<body>
+<body background="fondo.jpg">
 <div class="container">
-    <h2>Welcome to Open Weather!</h2>
-    <h4>Here you can find out about the weather of a city</h4>
     <br>
-    <p>
-        <input id="city" type="text" placeholder="City name">
-        <button type="button" class="btn btn-primary" onclick="app.getWeatherOfACity($('#city').val())">Search</button>
+    <br>
+    <h2 align="center">Bienvenido</h2>
+    <h4 align="center">Escribe una ciudad y dale click en buscar</h4>
+    <br>
+    <p align="center">
+        <input id="city" type="text" placeholder="Nombre Ciudad" align="center">
+        <button type="button" class="btn btn-primary" onclick="app.getWeatherOfACity($('#city').val())" >Buscar</button>
     </p>
-    <table class="table table-striped">
-        <thead class="thead-dark">
+    <table class="table table-striped" style="color:blue">
+        <thead class="thead-dark" style="color:red">
         <tr>
-            <th scope="col">Country code</th>
-            <th scope="col">City</th>
-            <th scope="col">Weather</th>
-            <th scope="col">Description</th>
-            <th scope="col">Temperature (°C)</th>
-            <th scope="col">Thermal sensation (°C)</th>
+            <th scope="col">Codigo Pais</th>
+            <th scope="col">Ciudad</th>
+            <th scope="col">Clima</th>
+            <th scope="col">Descripcion</th>
+            <th scope="col">Temperatura(°C)</th>
+            <th scope="col">Sensación térmica (°C)</th>
         </tr>
         </thead>
     </table>
@@ -44,10 +51,7 @@
 </div>
 </body>
 
-<footer class="text-center">
-    <br/>
-    Made by <strong> Juan Sebastián Frásica Galeano </strong>
-</footer>
+
 
 
 </html>

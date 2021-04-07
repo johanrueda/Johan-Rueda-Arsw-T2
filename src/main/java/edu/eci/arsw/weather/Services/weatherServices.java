@@ -12,6 +12,6 @@ public interface weatherServices {
      * @return
      */
 
-    Weather getWeatherOfACity(String nombre) ;
+    Weather getWeatherOfACity(String nombre) throws weatherServiceException;
 
 }

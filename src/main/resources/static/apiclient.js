@@ -1,6 +1,6 @@
 apiclient = (function () {
     let localhost = "http://localhost:8080";
-    let heroku = "https://openweather-arsw.herokuapp.com";
+    let heroku = "https://rueda-arsw-t2.herokuapp.com/";
 
     function getWeatherOfACity(city_name, callback) {
 

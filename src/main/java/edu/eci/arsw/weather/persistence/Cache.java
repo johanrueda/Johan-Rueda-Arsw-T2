@@ -5,12 +5,13 @@ import org.springframework.stereotype.Service;
 
 @Service
 public interface Cache {
-    Weather getWeatherOfACity(String city) ;
 
-    void putOnCache(Weather weather) ;
+    Weather getWeatherOfACity(String city) throws weatherPersistenceException;
 
-    void removeFromCache(Weather weather) ;
+    void putOnCache(Weather weather) throws weatherPersistenceException;
 
-    boolean isOnCache(String city) ;
+    void removeFromCache(Weather weather) throws weatherPersistenceException;
+
+    boolean isOnCache(String city) throws weatherPersistenceException;
 
 }
